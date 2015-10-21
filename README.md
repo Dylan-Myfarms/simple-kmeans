@@ -6,7 +6,7 @@ A simple implementation of a single dimensional k-means clustering algorithm.
   - Supports custom number of clusters and seeds
   - Supports pre-defined cluster starting points to avoid random result
   - Supports pre-defined maximum number of iterations
-  - Different results using the same seeds can be achieved by randomizing cluster starting points
+  - Generates random clusters and seeds if none are passed in.
   - Assertion tests
 
 ## Installation
