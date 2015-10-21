@@ -19,9 +19,9 @@ A simple implementation of a single dimensional k-means clustering algorithm.
 ```javascript
 var kmeans = require('simple-kmeans');
 
-// define seeds that will be grouped into a cluster
+// define seeds that will be grouped into a cluster (can be randomly generated and of any length)
 var seeds = [15,15,16,19,19,20,20,21,22,28,35,40,41,42,43,44,60,61,65];
-// define starting point for clusters
+// define starting point for clusters (can be randomly generated and of any length)
 var starting_clusters = [10, 40];
 // run kmeans clustering on data set, max iterations defaults to 9001 if not set
 var result = kmeans(starting_clusters, seeds);
