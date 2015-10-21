@@ -98,8 +98,6 @@ distance = function (clusters, value) {
 // take this iterations assignments and generate new clusters
 generateNewCentroids = function (assignments) {
     centroids = [];
-    console.log('assignments');
-    console.log(assignments);
     for (key in assignments) {
         // get mean of aggregate
         if (assignments[key].length > 0) {
