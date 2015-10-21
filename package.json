@@ -1,0 +1,32 @@
+{
+  "name": "simple-kmeans",
+  "version": "1.0.0",
+  "description": "A simple implementation of a single dimensional k-means-clustering algorithm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "keywords": [
+    "basic",
+    "simple",
+    "k-means",
+    "kmeans",
+    "k-means-clustering",
+    "clustering",
+    "statistics",
+    "analysis",
+    "binning",
+    "grouping",
+    "cluster",
+    "1D",
+    "single-dimension",
+    "machine-learning"
+  ],
+  "author": "Dylan Hamilton <dylan.hamilton@myfarms.com>",
+  "license": "ISC",
+  "dependencies": {
+    "basic-calculator": "^1.0.2",
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3"
+  }
+}
