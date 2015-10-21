@@ -10,8 +10,14 @@ bc = require('basic-calculator');
  */
 module.exports = function (clusters, seeds, k) {
     // initialize k if it isn't set
-    if (!k) {
+    if (typeof(k) == 'undefined') {
         k = 9001;
+    }
+    if (typeof(clusters) == 'undefined') {
+        clusters = randomClusters();
+    }
+    if (typeof(seeds) == 'undefined') {
+        seeds = randomSeeds(clusters);
     }
     // count iterations
     this.iterations = 0;
@@ -126,4 +132,28 @@ compareClusters = function (a, b) {
     }
 
     return false;
+}
+
+randomClusters = function () {
+    var clusters = [];
+    // get n number of clusters
+    var n = bc.random();
+    // get a starting point for each cluster
+    for (i=0; i < n; i++) {
+        clusters.push(bc.round(bc.random(1,100)));
+    }
+
+    return clusters;
+}
+
+randomSeeds = function (clusters) {
+    var seeds = [];
+    // get the number of seeds based on clusters
+    var n = bc.random(bc.mult(clusters.length,2), bc.mult(clusters.length,10));
+    // populate seeds
+    for (i=0; i < n; i++) {
+        seeds.push(bc.round(bc.random(1, 100)));
+    }
+
+    return seeds;
 }

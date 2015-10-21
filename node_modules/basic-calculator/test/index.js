@@ -98,4 +98,25 @@ describe('#correct', function() {
     var a = [9, 2, 5, 4, 12, 7, 8, 11, 9, 3, 7, 4, 12, 5, 4, 10, 9, 6, 9, 4];
     maths.variance(a, "population").should.equal(8.9);
   });
+  it('verifies random numbers fall within proper range', function() {
+    var min = 1;
+    var max = 100;
+    var rand = maths.random(min, max);
+    
+    var mincheck = (rand - min) > 0;
+    var maxcheck = (max - rand) > 0;
+
+    mincheck.should.equal(true);
+    maxcheck.should.equal(true);
+  });
+  it('verifies random number defaults are set to 1 and 10', function() {
+    var rand = maths.random();
+    
+    var mincheck = (rand - 1) > 0;
+    var maxcheck = (10 - rand) > 0;
+
+    mincheck.should.equal(true);
+    maxcheck.should.equal(true);
+  });
+  
 });

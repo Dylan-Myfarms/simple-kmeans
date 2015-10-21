@@ -63,14 +63,6 @@ var _mean = exports.mean = function(a, n) {
 	}) / n;
 }
 
-var _mean2 = exports.mean2 = function(a) {
-	// add all values
-	return a.reduce(function (c, d) {
-		return c + d
-	// divide by number of values
-	}) / (a.length - 1);
-}
-
 var _mode = exports.mode = function(a) {
 	var counts = {};
 	var get_max = [];
@@ -146,3 +138,9 @@ var _round_to = exports.roundTo = function(a, b) {
 	// round a to b units after the decimal
 	return Number(a.toFixed(b));
 };
+
+var _random = exports.random = function(min, max) {
+	min = typeof min !== 'undefined' ? min : 1;
+	max = typeof max !== 'undefined' ? max : 10;
+	return Math.random() * (max - min) + min;
+}

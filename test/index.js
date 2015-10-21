@@ -38,4 +38,14 @@ describe('#correct result per settings for kmeans', function() {
       JSON.stringify(result).should.equal(JSON.stringify({ '18.56': [ 15, 15, 16, 19, 19, 20, 20, 21, 22, 28 ],'45.9': [ 35, 40, 41, 42, 43, 44, 60, 61, 65 ]}));
       JSON.stringify(result2).should.equal(JSON.stringify({ '18.56': [ 15, 15, 16, 19, 19, 20, 20, 21, 22, 28 ],'45.9': [ 35, 40, 41, 42, 43, 44, 60, 61, 65 ]}));
   });
+  it('verifies the algorithm will run using random numbers if none are passed in', function() {
+      res = kmeans()
+      result = res.result
+      iterations = res.iterations
+      // check result
+      result = JSON.stringify(result).length > 0
+      iterations = iterations > 0
+      result.should.equal(true);
+      iterations.should.equal(true);
+  });
 });
