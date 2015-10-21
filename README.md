@@ -33,7 +33,7 @@ var result = kmeans(starting_clusters, seeds);
 //    }
 
 // limit number of iterations to 2
-var result = kmeans(starting_clusters, seeds);
+var result = kmeans(starting_clusters, seeds, 2);
 //     result = {
 //         "iterations": 2,
 //         "result": {
